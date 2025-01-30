@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+footer {
+    margin-top: 20px;
+}
+.card {
+    margin: 15px 0;
+}

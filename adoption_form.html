@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Adoption Agency - Adoption Form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault(); // Prevent default form submission
+        alert("Form submitted successfully! Redirecting to the homepage.");
+        window.location.href = "index.html"; // Redirect to index.html
+      }
+    </script>
+  </head>
+  <body>
+    <header class="bg-light p-3">
+      <h1>Pet Adoption Agency</h1>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Pet Adoption</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adopt.html">Adopt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adoption_process.html"
+                >Adoption Process</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="success.html">Success Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="volunteer.html">Volunteer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container mt-5">
+      <h2>Adoption Form</h2>
+      <p>
+        Please fill out the form below to express your interest in adopting a
+        pet. We will contact you shortly to discuss the next steps.
+      </p>
+
+      <form onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Contact Number:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10}"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea
+            class="form-control"
+            id="address"
+            name="address"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="pet">Pet Interested In:</label>
+          <select class="form-control" id="pet" name="pet" required>
+            <option value="Fluffy the Cat">Fluffy (Cat)</option>
+            <option value="Buddy the Dog">Buddy (Dog)</option>
+            <option value="Charlie the Dog">Charlie (Dog)</option>
+            <option value="Mittens the Cat">Mittens (Cat)</option>
+            <option value="Bunbun the Rabbit">Bunbun (Rabbit)</option>
+            <option value="Nibbles the Hamster">Nibbles (Hamster)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Additional Comments:</label>
+          <textarea
+            class="form-control"
+            id="comments"
+            name="comments"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Submit Adoption Form
+        </button>
+      </form>
+    </section>
+
+    <footer class="text-center bg-light py-3">
+      <p>Contact us: email@example.com | Phone: +123456789</p>
+      <p>
+        Follow us: <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+      </p>
+      <p><a href="privacy_policy.html">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
